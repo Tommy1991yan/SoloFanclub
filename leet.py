@@ -14,6 +14,19 @@ LEET_MAP = {
 }
 
 
+SOLO_CAN = r"""
+     ________
+    |        |
+    | S O L O|
+    |  ~~~~  |
+    | /    \ |
+    ||      ||
+    ||      ||
+    | \    / |
+    |________|
+"""
+
+
 def to_leet(text: str) -> str:
     return "".join(LEET_MAP.get(c.lower(), c) for c in text)
 
@@ -21,11 +34,13 @@ def to_leet(text: str) -> str:
 def main():
     if len(sys.argv) > 1:
         print(to_leet(" ".join(sys.argv[1:])))
+        print(SOLO_CAN)
     else:
         print("Enter text (Ctrl+D to quit):", file=sys.stderr)
         try:
             for line in sys.stdin:
                 print(to_leet(line), end="")
+                print(SOLO_CAN)
         except KeyboardInterrupt:
             pass
 
