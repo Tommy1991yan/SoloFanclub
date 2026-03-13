@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 leet.py \"Hello World, this is my Solo Fanclub\")",
+      "Bash(python3 leet.py \"The Quick Brown Fox Jumps Over The Lazy Dog\")"
+    ]
+  }
+}
